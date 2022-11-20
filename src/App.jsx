@@ -73,35 +73,32 @@ const App = () => {
 					<h1>
 						<FaLaptopHouse /> On-line shop
 					</h1>
-
 					<div className='cart'>
 						<h2>
 							<ProductsAdded cart={cart} products={products} />
 						</h2>
-						<br />
 					</div>
 				</div>
 			</header>
-			<br />
-			<br />
 			<div className='container_body'>
-				<h3>
-					{' '}
-					<FaShoppingBag /> Products
-				</h3>
-				<div className='list_products'>
-					<ProductsList products={products} addProduct={addProduct} />
+				<div className='products-section'>
+					<h3>
+						{' '}
+						<FaShoppingBag /> Products
+					</h3>
+					<div className='list_products'>
+						<ProductsList products={products} addProduct={addProduct} />
+					</div>
 				</div>
-
-				<div>
+				<div className='summary-section'>
 					<Summary cart={cart} />
 				</div>
-				<div className='added_products'>
+				<div className='cart-section'>
 					{cart.length > 0 && (
 						<>
 							<h3>
 								{' '}
-								<FaShoppingCart> </FaShoppingCart> Shopping cart
+								<FaShoppingCart></FaShoppingCart> Shopping cart
 							</h3>
 							<div className='container_carrito'>
 								<Cart

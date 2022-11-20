@@ -38,9 +38,13 @@ const Summary = ({ cart }) => {
 				<h3>
 					<FaClipboardList></FaClipboardList> Summary
 				</h3>
-				
 				<p className='sumary-letter'>
-					<input type='number' onChange={handleDiscountChange} value={discount}  />
+					<input
+						type='number'
+						onChange={handleDiscountChange}
+						value={discount}
+					/>
+					<br></br>
 					Subtotal: ${subtotal}
 					<br></br>
 					Coupon: {discount}
